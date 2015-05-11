@@ -282,8 +282,6 @@ module.exports = function(grunt) {
                   page = '{{!}}';
                 }
 
-                console.log('Matter:' + JSON.stringify(assemble.options.yfm));
-
                 var parsedPage = matter(page,assemble.options.yfm);
                 pageContext = useFileInfo ? (fileInfo.data || fileInfo.metadata || {}) : parsedPage.data;
 
