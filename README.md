@@ -58,7 +58,10 @@ assemble: {
     plugins: ['permalinks'],
     partials: ['includes/**/*.hbs'],
     layout: ['layouts/default.hbs'],
-    data: ['data/*.{json,yml}']
+    data: ['data/*.{json,yml}'],
+    yfm: {
+      delims: ['~~~','~~~']
+    }
   },
   site: {
     src: ['docs/*.hbs'],
@@ -74,6 +77,12 @@ assemble: {
 
 ### Options
 See the documentation for [Options](http://assemble.io/docs/Options.html) for more information.
+
+### yfm
+Type: `Object`
+Default: yfm: {delims: ['---','---']} //[start delim, end delim]
+
+Used to specify the delimiter for front matter to override the default ---
 
 ### [assets](http://assemble.io/docs/options-assets.html)
 Type: `String`
